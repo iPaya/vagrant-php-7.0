@@ -98,32 +98,6 @@ extension=phar.so
 " > $php_ext_path/conf.d/20-phar.ini
 echo "Done!"
 
-info "Install Swoole PHP Extension"
-mkdir -p $swoole_src_path && \
-cd $swoole_src_path && \
-wget https://github.com/swoole/swoole-src/archive/1.8.7-stable.tar.gz && \
-tar xzvf 1.8.7-stable.tar.gz && \
-cd swoole-src-1.8.7-stable && \
-phpize && \
-./configure && \
-make --quiet && \
-make install && \
-echo -e "; configuration for swoole module\n; priority=20\nextension=swoole.so" > $php_ext_path/conf.d/20-swoole.ini
-echo "Done!"
-
-info "Install Yaconf PHP Extension"
-mkdir -p $yaconf_src_path && \
-cd $yaconf_src_path && \
-wget https://github.com/laruence/yaconf/archive/yaconf-1.0.2.tar.gz && \
-tar xzf yaconf-1.0.2.tar.gz && \
-cd yaconf-yaconf-1.0.2 && \
-phpize && \
-./configure && \
-make --quiet && \
-make install && \
-echo -e "; configuration for Yaconf module\n; priority=20\nextension=yaconf.so\nyaconf.directory=/tmp/yaconf" > $php_ext_path/conf.d/20-yaconf.ini
-echo "Done!"
-
 info "Install PHP XDebug"
 xdebug_src_path="$src_path/xdebug";
 mkdir -p $xdebug_src_path && \
