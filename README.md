@@ -1,0 +1,1 @@
+# vagrant-php-7.0
