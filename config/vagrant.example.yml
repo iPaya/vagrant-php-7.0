@@ -1,0 +1,8 @@
+# Guest OS timezone
+timezone: Asia/Shanghai
+
+# Virtual machine CPU cores number
+cpus: 1
+
+# Virtual machine RAM
+memory: 2048

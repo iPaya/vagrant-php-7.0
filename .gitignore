@@ -1,0 +1,4 @@
+.idea/
+.vagrant/
+config/sites.yml
+config/vagrant.yml
