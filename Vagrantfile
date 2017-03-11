@@ -33,6 +33,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision 'shell', path: './scripts/install-php.sh'
   config.vm.provision 'shell', path: './scripts/install-redis.sh'
   config.vm.provision 'shell', path: './scripts/install-phpmyadmin.sh'
+  config.vm.provision 'shell', path: './scripts/clean.sh'
 
   config.push.define "atlas" do |push|
     push.app = "iPaya/php-7.0"
