@@ -5,8 +5,6 @@ php_version="7.0.12"
 php_src_path="$src_path/php/"
 php_path="/opt/php/php-$php_version"
 php_ext_path="/etc/php7"
-swoole_src_path="$src_path/swoole"
-yaconf_src_path="$src_path/yaconf"
 
 #== Bash helpers ==
 function info {
@@ -111,7 +109,7 @@ mkdir -p $xdebug_src_path && \
     make install && \
     echo -e "; configuration for XDebug module
 ; priority=20
-extension=xdebug.so
+zend_extension=xdebug.so
 xdebug.remote_enable=1
 xdebug.remote_port=9000
 xdebug.idekey=\"XDEBUG\"
